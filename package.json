@@ -4,7 +4,7 @@
   "author": "Danzilla",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/danzilla/blingBlaw.git"
+    "url": "git+https://github.com/danzilla/budgetApp.git"
   },
   "scripts": {
     "dev-server-install": "cd ./server && npm install",
