@@ -2,11 +2,13 @@ import { connect } from "react-redux";
 import { Col, Divider, Row } from 'antd';
 
 import { SearchOutlined, HeartTwoTone, SettingTwoTone, PieChartTwoTone, UploadOutlined, CodeTwoTone, EditOutlined, SyncOutlined } from '@ant-design/icons';
-import { Input, Select, Button, DatePicker } from 'antd';
+import { Input, Select, Button, DatePicker, Card } from 'antd';
 
 import { Rose } from '@ant-design/plots';
 
 import { Space, Table, Tag } from 'antd';
+
+const { TextArea } = Input;
 const { Column, ColumnGroup } = Table;
 
 const { RangePicker } = DatePicker;
@@ -203,8 +205,8 @@ const Dashboard = (porps) => {
 
         <>
 
-            <Row className="card-3" align="middle" type="flex" justify="center" style={{ height: '10vh' }}>
-                
+            <Row className="card-3" align="middle" type="flex" justify="center" style={{ padding: '10px' }}>
+
                 <Col align="left" span={6} style={{ padding: '5px' }}>
                     FannyPack
                 </Col>
@@ -232,18 +234,28 @@ const Dashboard = (porps) => {
                 </Col>
             </Row>
 
+
+
+            <Divider />
+            <Row className="card-1" align="middle" type="flex" justify="center"  style={{ padding: '10px' }}>
+                <TextArea rows={5} placeholder="SELECT * FROM ..." maxLength={6} />
+                <Button style={{ margin: '10px' }} type="primary">Submit Query</Button>
+                <Divider orientation="left"><p>SQL Response</p></Divider>
+                <p>asdadadsads asda dadadad asd asd asdasdawda das </p>
+            </Row>
+
             <Divider />
 
-            <Row type="flex"  style={{ height: '10vh' }}>
+            <Row type="flex" justify="center">
 
-                <Col align="left" span={24}>
+                <Col span={24}>
                     <Button size="large" type="primary">
-                        <UploadOutlined twoToneColor="hotpink" style={{ fontSize: '16px', marginLeft: 5 }} />
+                        <UploadOutlined style={{ fontSize: '16px', marginLeft: 5 }} />
                         Add transaction to "Account"
                     </Button>
                 </Col>
-                <Col align="left" span={17} style={{position: 'sticky'}}>
-                    <Table style={{marginRight: '15px', marginBottom: '50px'}} className="card-3 " dataSource={data2}>
+                <Col span={17} style={{ position: 'sticky' }}>
+                    <Table style={{ marginRight: '15px', marginBottom: '50px' }} className="card-3 " dataSource={data2}>
                         <Column title="First Name" dataIndex="firstName" key="firstName" />
                         <Column title="Last Name" dataIndex="lastName" key="lastName" />
                         <Column title="Age" dataIndex="age" key="age" />
@@ -273,7 +285,7 @@ const Dashboard = (porps) => {
                         />
                     </Table>
                 </Col>
-                <Col span={6}>
+                <Col span={7}>
                     <Rose className="card-3 " style={{ position: 'sticky' }} {...config} />
                     <Rose className="card-3 " style={{ position: 'sticky' }} {...config} />
                 </Col>

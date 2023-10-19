@@ -58,7 +58,7 @@ const Login = (props) => {
 
     return (
         <Row style={{ height: '100vh' }} type="flex" justify="center" align="middle">
-            <Col className="card-2 p-2">
+            <Col className="card-3" style={{padding: '20px'}}>
                 <h1 style={{ color: 'black' }}>Sign-in</h1>
                 {displayContent}
             </Col>
