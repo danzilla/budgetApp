@@ -35,7 +35,7 @@ const GraphView = (porps) => {
         xField: 'type',
         yField: 'value',
         seriesField: 'type',
-        radius: 0.9,
+        radius: 0.7,
         legend: {
             position: 'right',
         },
@@ -43,8 +43,8 @@ const GraphView = (porps) => {
 
     return (
         <>
-            <Rose className="card-3 " style={{ position: 'sticky' }} {...config} />
-            <Rose className="card-3 " style={{ position: 'sticky' }} {...config} />
+            <Rose className="card-3 " style={{ position: 'sticky', height: '45%'}} {...config} />
+            <Rose className="card-3 " style={{ position: 'sticky', height: '45%' }} {...config} />
         </>
     );
 }

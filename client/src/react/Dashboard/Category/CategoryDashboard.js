@@ -1,12 +1,11 @@
 import { connect } from "react-redux";
 
 import { PlusOutlined } from '@ant-design/icons';
-import { UploadOutlined } from '@ant-design/icons';
 
-import { Space, Select, Table, Tag, Popover, Button } from 'antd';
+import { Space, Input, Select, Table, Tag, Popover, Button } from 'antd';
 const { Column } = Table;
 
-const TableView = (porps) => {
+const CategoryDashboard = (porps) => {
 
     const data2 = [
         {
@@ -139,8 +138,7 @@ const TableView = (porps) => {
 
 
     return (
-        <>
-            <Button size="large" type="primary"> <UploadOutlined style={{ fontSize: '16px', marginLeft: 5 }} />Add transaction to "Account"</Button>
+        <>Category
             <Table style={{ marginRight: '15px', marginBottom: '50px' }} className="card-3 " dataSource={data2}>
                 <Column title="Last Name" dataIndex="lastName" key="lastName" />
                 <Column title="Age" dataIndex="age" key="age" />
@@ -196,4 +194,4 @@ const TableView = (porps) => {
 
 // Redux connect to store
 const mapStateToProps = state => { return { data: state }; };
-export default connect(mapStateToProps)(TableView);
+export default connect(mapStateToProps)(CategoryDashboard);
