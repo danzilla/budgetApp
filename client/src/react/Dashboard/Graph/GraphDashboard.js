@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 import { Row } from 'antd';
 
-const GraphDashboard = (porps) => {
+const GraphDashboard = (props) => {
 
     return (
         <>

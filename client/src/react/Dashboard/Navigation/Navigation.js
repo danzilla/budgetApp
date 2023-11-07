@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 import { Col, Row } from 'antd';
 
-import { SettingTwoTone, PieChartTwoTone, CodeTwoTone, SyncOutlined, TagsTwoTone, DatabaseTwoTone } from '@ant-design/icons';
+import { SettingTwoTone, PieChartTwoTone, CodeTwoTone, TagsTwoTone, DatabaseTwoTone } from '@ant-design/icons';
 import { Select, Button, DatePicker } from 'antd';
 import { Space } from 'antd';
 const { RangePicker } = DatePicker;
@@ -15,7 +15,7 @@ const onChangeAccount = (value, data) => {
     console.log(JSON.stringify(data));
 }
 
-const Navigation = (porps) => {
+const Navigation = (props) => {
 
     return (
         <>
@@ -43,18 +43,18 @@ const Navigation = (porps) => {
                 </Col>
                 <Col align="right" span={6}>
 
-                    {porps.displayPage.graphDashboard === true ?
-                        <Button onClick={porps.handleViewTable} size="large" type="text">
+                    {props.displayPage.graphDashboard === true ?
+                        <Button onClick={props.handleViewTable} size="large" type="text">
                             <DatabaseTwoTone twoToneColor="hotpink" style={{ fontSize: '25px', marginLeft: 5 }} /></Button>
                         :
-                        <Button onClick={porps.handleViewGraph} size="large" type="text">
+                        <Button onClick={props.handleViewGraph} size="large" type="text">
                             <PieChartTwoTone twoToneColor="hotpink" style={{ fontSize: '25px', marginLeft: 5 }} /></Button>
                     }
 
-                    <Button onClick={porps.handleViewCategory} size="large" type="text">
+                    <Button onClick={props.handleViewCategory} size="large" type="text">
                         <TagsTwoTone twoToneColor="green" style={{ fontSize: '25px', marginLeft: 5, marginRight: 5 }} /></Button>
 
-                    <Button onClick={porps.handleViewSQLCMD} size="large" type="text">
+                    <Button onClick={props.handleViewSQLCMD} size="large" type="text">
                         <CodeTwoTone twoToneColor="blue" style={{ fontSize: '25px', marginLeft: 5 }} /></Button>
                     
                     <Button size="large" type="text"><SettingTwoTone twoToneColor="#80B3FF" style={{ fontSize: '25px', marginRight: 5 }} /></Button>

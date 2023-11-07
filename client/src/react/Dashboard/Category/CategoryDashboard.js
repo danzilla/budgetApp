@@ -2,10 +2,10 @@ import { connect } from "react-redux";
 
 import { PlusOutlined } from '@ant-design/icons';
 
-import { Space, Input, Select, Table, Tag, Popover, Button } from 'antd';
+import { Space, Select, Table, Tag, Popover, Button } from 'antd';
 const { Column } = Table;
 
-const CategoryDashboard = (porps) => {
+const CategoryDashboard = (props) => {
 
     const data2 = [
         {

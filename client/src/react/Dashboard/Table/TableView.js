@@ -4,9 +4,12 @@ import { PlusOutlined } from '@ant-design/icons';
 import { UploadOutlined } from '@ant-design/icons';
 
 import { Space, Select, Table, Tag, Popover, Button } from 'antd';
+
+import AddTransactions from "../AddTransactions/AddTransactions";
+
 const { Column } = Table;
 
-const TableView = (porps) => {
+const TableView = (props) => {
 
     const data2 = [
         {
@@ -140,7 +143,8 @@ const TableView = (porps) => {
 
     return (
         <>
-            <Button size="large" type="primary"> <UploadOutlined style={{ fontSize: '16px', marginLeft: 5 }} />Add transaction to "Account"</Button>
+            <AddTransactions />
+
             <Table style={{ marginRight: '15px', marginBottom: '50px' }} className="card-3 " dataSource={data2}>
                 <Column title="Last Name" dataIndex="lastName" key="lastName" />
                 <Column title="Age" dataIndex="age" key="age" />

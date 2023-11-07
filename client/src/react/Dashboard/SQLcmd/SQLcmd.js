@@ -3,7 +3,7 @@ import { Divider, Row } from 'antd';
 import { Input, Button} from 'antd';
 const { TextArea } = Input;
 
-const SQLcmd = (porps) => {
+const SQLcmd = (props) => {
 
     return (
         <>

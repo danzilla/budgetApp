@@ -2,7 +2,7 @@ import { connect } from "react-redux";
 import { Rose } from '@ant-design/plots';
 
 
-const GraphView = (porps) => {
+const GraphView = (props) => {
 
     const data = [
         {
