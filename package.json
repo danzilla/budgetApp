@@ -1,0 +1,20 @@
+{
+  "name": "budgetapp",
+  "version": "1.0.0",
+  "author": "Danzilla",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danzilla/budgetApp.git"
+  },
+  "scripts": {
+    "dev-server-install": "cd ./server && npm install",
+    "dev-client-install": "cd ./client && npm install",
+    "install": "npm run dev-server-install & npm run dev-client-install",
+    "server": "cd ./server && npm start",
+    "client": "cd ./client && npm start",
+    "db": "docker compose up -d pgadmin && docker compose up postgres_db",
+    "docker-start": "docker compose up -d pgadmin && docker compose up postgres_db server client",
+    "docker-clean": "docker compose rm -f && docker compose build --no-cache"
+  },
+  "dependencies": {}
+}
