@@ -1,16 +1,25 @@
-import { Col, Row } from 'antd';
+import Login from './Login/Login';
+import Register from './Register/Register';
 
-export default function Auth() {
+import { useState } from "react";
 
-  const title = 'Authentication Page'
 
-  return (
-    <Row style={{ height: '100vh' }} type="flex" justify="center" align="middle">
-        <Col className="card-3" style={{padding: '20px'}}>
-            <h1 style={{ color: 'black' }}>{title}</h1>
-            <a href="/Dashboard">Dashboard</a>
-        </Col>
-    </Row>
-  );
+const Auth = () => {
+
+  const [pages, setPages] = useState({ login: true, register: false})
+
+  const activeLogin = () => { setPages({ login: true, register: false }) }
+  const activeRegister = () => { setPages({ login: false, register: true }) }
+
+  let displayPage;
+  if (pages.login === true) {
+    displayPage = <Login activeRegister={activeRegister} />
+  } else if (pages.register === true) {
+    displayPage = <Register activeLogin={activeLogin} />
+  }
+
+  return (<>{displayPage}</>);
 }
 
+// Export
+export default Auth;
