@@ -1,16 +1,16 @@
-import { Col, Row } from 'antd';
+import Navigation from './Navigation/Navigation';
+import Accounts from './Accounts/Accounts';
 
-export default function Dashboard() {
-
-  const title = 'Dashboard Page'
+const Dashboard = (props) => {
 
   return (
-    <Row style={{ height: '100vh' }} type="flex" justify="center" align="middle">
-        <Col className="card-3" style={{padding: '20px'}}>
-            <h1 style={{ color: 'black' }}>{title}</h1>
-            <a href="/">Home</a>
-        </Col>
-    </Row>
+    <>
+      <Navigation />
+      <Accounts />
+    </>
+    
   );
 }
 
+// Export
+export default Dashboard;
