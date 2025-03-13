@@ -1,5 +1,5 @@
-import { PlusOutlined } from '@ant-design/icons';
-import { Space, Select, Table, Tag, Popover, Button } from 'antd';
+import { PlusOutlined, UploadOutlined } from '@ant-design/icons';
+import { Space, Select, Table, Tag, Popover, Button, Divider } from 'antd';
 
 
 const { Column } = Table;
@@ -136,8 +136,17 @@ const TableView = (props) => {
     ];
 
     return (
-        <>
-            <Table style={{ marginRight: '15px', marginBottom: '50px' }} className="card-3 " dataSource={data2}>
+        <>  
+            <Divider orientation="right" plain>
+                <Button
+                    type="primary"
+                    icon={<UploadOutlined />}
+                    >
+                    Upload transaction to Account
+                </Button>
+            </Divider>
+
+            <Table className="card-3 " dataSource={data2}>
                 <Column title="Last Name" dataIndex="lastName" key="lastName" />
                 <Column title="Age" dataIndex="age" key="age" />
                 <Column title="Address" dataIndex="address" key="address" />

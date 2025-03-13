@@ -5,9 +5,9 @@ import { SettingTwoTone, PieChartTwoTone, CodeTwoTone, TagsTwoTone } from '@ant-
 const Navigation = (props) => {
 
   return (
-    <Row className="card-3" align="middle" style={{ padding: '10px' }}>
+    <Row className="card-4" align="middle" style={{ padding: '10px' }}>
       <Col align="left" span={6}>
-        FannyPack
+        <h2>FannyPack</h2>
       </Col>
       <Col span={6} offset={12}>
         <Button size="large" type="text">
