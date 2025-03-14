@@ -1,8 +1,14 @@
-import { PlusOutlined, UploadOutlined } from '@ant-design/icons';
-import { Space, Select, Table, Tag, Popover, Button, Divider } from 'antd';
+import { PlusOutlined, ReloadOutlined } from '@ant-design/icons';
+import { Space, Select, Table, Tag, Popover, Button, Row, Col } from 'antd';
 
+import UploadTransaction from './UploadTransaction';
 
 const { Column } = Table;
+
+const SelectAction = (value) => {
+    console.log(`selected ${value}`);
+  };
+
 
 const TableView = (props) => {
 
@@ -137,14 +143,36 @@ const TableView = (props) => {
 
     return (
         <>  
-            <Divider orientation="right" plain>
-                <Button
-                    type="primary"
-                    icon={<UploadOutlined />}
-                    >
-                    Upload transaction to Account
-                </Button>
-            </Divider>
+            <Row type="flex" align="middle">
+                <Col>
+                    <h2>Account: 
+                        <Select
+                            defaultValue="lucy"
+                            style={{ width: 200, textAlign: 'left', marginLeft: '20px'  }}
+                            size="large"
+                            onChange={SelectAction}
+                            options={[
+                                { value: 'jack', label: 'Jack' },
+                                { value: 'lucy', label: 'Lucy' },
+                                { value: 'Yiminghe', label: 'yiminghe' },
+                                { value: 'disabled', label: 'Disabled'},
+                            ]}
+                        />
+                    </h2>
+                </Col>
+                <Col style={{ marginLeft: '20px', marginRight: '20px'  }}>
+                    <UploadTransaction />
+                </Col>
+                <Col>
+                    <Button
+                        size='large'
+                        color="primary"
+                        variant="outlined"
+                        icon={<ReloadOutlined />}
+                        >
+                    </Button>
+                </Col>
+            </Row>
 
             <Table className="card-3 " dataSource={data2}>
                 <Column title="Last Name" dataIndex="lastName" key="lastName" />
