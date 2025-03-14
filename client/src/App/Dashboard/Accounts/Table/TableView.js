@@ -9,7 +9,6 @@ const SelectAction = (value) => {
     console.log(`selected ${value}`);
   };
 
-
 const TableView = (props) => {
 
     const data2 = [
@@ -223,7 +222,6 @@ const TableView = (props) => {
             </Table>
 
         </>
-
     );
 }
 
