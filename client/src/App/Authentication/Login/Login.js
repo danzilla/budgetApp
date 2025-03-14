@@ -20,9 +20,10 @@ const Login = (props) => {
 
     return (
         <Row style={{ height: '100vh' }} type="flex" justify="center" align="middle">
-            <Col className="card-3" style={{padding: '20px'}}>
+            <Col className="card-3" style={{padding: '50px'}}>
                 <h1 style={{ color: 'black' }}>Sign-in</h1>
 
+                {/* User and Password form field */}
                 <Form.Item>
                     <Input
                         name="userName"
@@ -41,13 +42,13 @@ const Login = (props) => {
                         prefix={<LockOutlined style={{ color: 'rgba(0,0,1,.25)' }} />}
                         onChange={handleChange} required />
                 </Form.Item>
+
+                {/* Login and Register Button */}
                 <Form.Item>
                     <Row type="flex" justify="center">
                         <Button
                             onClick={handleSubmit}
-                            type="primary"
-                            htmlType="submit"
-                            className="login-form-button">
+                            type="primary">
                             Log in
                         </Button>
                         <Button
