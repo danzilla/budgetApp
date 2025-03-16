@@ -1,10 +1,21 @@
 {
-  "name": "server",
+  "name": "budget-app-api",
   "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "author": "Dan Alphonza",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danzilla/blingBlaw.git"
   },
-  "author": "",
-  "license": "ISC"
+  "scripts": {
+    "start": "nodemon ./api/app.js --ignore client"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "nodemon": "^3.1.9",
+    "pg": "^8.14.0",
+    "pg-pool": "^3.8.0"
+  }
 }
